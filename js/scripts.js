@@ -1,26 +1,27 @@
 //user interface
-$(document).ready(function(){
-  $("form#Ping-Pong").submit(function(event){
-    var userInput = parseInt($("input#userInput").val());
-      var result = pingpong(userInput);
-      $("#result").text(result);
-         event.preventDefault();
-  });
+$(document).ready(function() {
+    $("form#Ping-Pong").submit(function(event) {
+        event.preventDefault();
+        var userInput = parseInt($("input#userInput").val());
+        var result = pingPong(userInput);
+        result.forEach(function (number) {
+          $("ul#result").append('<li>'+number+'</li>');
+        });
+    });
 });
 //Business logic
-function pingpong(userInput){
-  var game =[];
-for (x=1; x <= 1000; x++){
-    if( x % 3 === 0 ){ console.log();
-        game.push("ping");
+ var pingPong = function (userInput) {
+    var game = [];
+    for (var x = 1; x <= userInput; x++) {
+        if (x % 15 === 0) {
+            game.push("pingpong");
+        } else if (x % 5 === 0) {
+                game.push("pong");
+        } else if (x % 3 === 0) {
+                game.push("ping");
+        } else {
+            game.push(x);
+        }
     }
-    if( x % 5 === 0 ){ console.log();
-        game.push("pong");
-    }
-    if( ( x % 3 !== 0 ) && ( x % 5 !==0 ) ){  console.log();
-       game.push(pingpong);
-    }
-    // return game;
-    $("#result").show();
-  }
-}
+    return game;
+  };
