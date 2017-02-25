@@ -5,14 +5,25 @@ h1{
   padding-top: 50px;
 
 }
-.header{
-
+h4{
+  color: #ffb338;
 }
+
 #wrap{
   background-color: lightgrey;
 
 }
 body{
   background-color: lightgrey;
-  /*background-image: url(../images/pingpong1.jpg);*/
+  margin: 20px;
+  background-image: url(../images/pingpong.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: yellow;
+}
+.col-md-3{
+  border-style: groove;
+}
+.col-md-9{
+  border-style: double;
 }
