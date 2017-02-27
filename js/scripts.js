@@ -2,6 +2,7 @@
 $(document).ready(function() {
     $("form#Ping-Pong").submit(function(event) {
         event.preventDefault();
+          $("ul#result").empty();
         var userInput = parseInt($("input#userInput").val());
         var result = pingPong(userInput);
         result.forEach(function (number) {
