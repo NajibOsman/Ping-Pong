@@ -3,10 +3,8 @@ h1{
   text-align: center;
   height: 100px;
   padding-top: 50px;
+  text-decoration-style: wavy;
 
-}
-h4{
-  color: #ffb338;
 }
 
 #wrap{
@@ -19,11 +17,17 @@ body{
   background-image: url(../images/pingpong.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  color: yellow;
+
 }
 .col-md-3{
   border-style: groove;
+  color: orange;
 }
 .col-md-9{
   border-style: double;
+  color: #960371;
+}
+.btn{
+  color: aqua;
+  background-color: black;
 }
